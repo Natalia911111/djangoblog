@@ -11,14 +11,13 @@
         <h3>Autor: Natalia</h3>
         <h4>Wszystkie prawa zastrzeżone</h4>
     </div>
-<p>To jest akapit</p>
-<em>To jest wyróżniony tekst</em><br>
-<strong>To jest pogrubiony tekst</strong>
-<a href="https://strefakursow.pl">LINK</a>
-<ul>
-    <li>Elementy listy</li>
-    <li>Elementy listy</li>
-    <li>Elementy listy</li>
-</ul>
+
+        {% for post in posts %}
+    <div>
+        <p>opublikowany: {{post.publish_date}}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <em>{{post.text|linebreaksbr }}</em>
+    </div>
+        {% endfor %}
 </body>
 </html>
